@@ -1,0 +1,12 @@
+<div class="container-parent">
+  Users Count: {{users().length}}
+  
+  @for( user of users(); track user.name){
+    <ng-content select="header" class="container-parent__header"></ng-content>
+    <ng-content select="footer" class="container-parent__footer"></ng-content>
+    <span class="container-parent__footer">
+      <ng-content select=".bla" ></ng-content
+    ></span>
+  }
+  
+</div>

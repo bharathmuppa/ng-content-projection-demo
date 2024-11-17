@@ -6,10 +6,11 @@ import {
 } from '@angular/core';
 import { ChildComponent } from '../child-component/child.component';
 import { CommonModule } from '@angular/common';
+import { ContentContainerMultiple } from '../content-container-multiple/content-container-multiple.component';
 
 @Component({
   selector: 'parent-container',
-  imports: [ChildComponent, CommonModule],
+  imports: [ChildComponent, CommonModule, ContentContainerMultiple],
   standalone: true,
   templateUrl: './parent-container.component.html',
   styleUrls: ['./parent-container.componenent.scss'],

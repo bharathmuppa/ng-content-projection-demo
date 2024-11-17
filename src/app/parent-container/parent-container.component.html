@@ -30,3 +30,12 @@
 <ng-template #t1 let-user>
   <p>User: {{ user.name }}</p>
 </ng-template>
+
+
+<h1>Content Component Multiple</h1>
+
+<content-container-multiple [users]="Users">
+  <header>Hello World</header>
+  <footer>I am Footer</footer>
+  <div class="bla">hello</div>
+</content-container-multiple>

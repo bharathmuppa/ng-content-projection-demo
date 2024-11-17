@@ -1,0 +1,32 @@
+<h1>Sample</h1>
+<child-component>
+  <header>Hello World</header>
+  <footer>I am Footer</footer>
+  <div class="bla">hello</div>
+</child-component>
+
+<h1>Sample 2</h1>
+@for(user of Users;track user.name){
+<child-component>
+  <header>{{ user.name }}</header>
+  <footer>{{ user.country }}</footer>
+</child-component>
+}
+
+<h1>Sample 3</h1>
+<child-component *ngFor="let user of Users">
+  <header>{{ user.name }}</header>
+  <footer>{{ user.country }}</footer>
+</child-component>
+
+<h1>Template reference Example</h1>
+<div *ngFor="let item of Users">
+  <ng-container
+    [ngTemplateOutlet]="t1"
+    [ngTemplateOutletContext]="{ $implicit: item }"
+  ></ng-container>
+</div>
+
+<ng-template #t1 let-user>
+  <p>User: {{ user.name }}</p>
+</ng-template>
